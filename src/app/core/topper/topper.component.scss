@@ -1,0 +1,30 @@
+.topper {
+  background-image: url('../../../assets/myway.svg');
+  // background-color: #333;
+  backdrop-filter: blur(5px); /* Effet de flou pour l'arrière-plan */
+
+  color: #fff;
+  width: 100%;
+  height: 13%;
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  z-index: 6;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  padding: 20px;
+  box-sizing: border-box;
+  app-connected{
+    max-height: 80%;
+    max-width: 20%;
+  }
+  svg{
+    width: cover;
+    max-height: 10rem;
+  }
+}
+
+

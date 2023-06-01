@@ -1,0 +1,70 @@
+<form [formGroup]="signinForm" (ngSubmit)="onSubmit()">
+    <div>
+      <label for="user_firstname">Prénom</label>
+      <input type="text" id="user_firstname" formControlName="user_firstname">
+      <div *ngIf="signinForm.get('user_firstname')?.invalid && signinForm.get('user_firstname')?.touched" class="error-message">
+        Le prénom est requis.
+      </div>
+    </div>
+  
+    <div>
+      <label for="user_lastname">Nom</label>
+      <input type="text" id="user_lastname" formControlName="user_lastname">
+      <div *ngIf="signinForm.get('user_lastname')?.invalid && signinForm.get('user_lastname')?.touched" class="error-message">
+        Le nom est requis.
+      </div>
+    </div>
+    
+    <div>
+      <label for="user_email">Adresse e-mail</label>
+      <input type="email" id="user_email" formControlName="user_email">
+      <div *ngIf="signinForm.get('user_email')?.invalid && (signinForm.get('user_email')?.dirty || signinForm.get('user_email')?.touched)" class="error-message">
+        <div *ngIf="signinForm.get('user_email')?.errors?.['required']">
+          L'user_email est obligatoire.
+        </div>
+        <div *ngIf="signinForm.get('user_email')?.errors">
+          L'user_email n'est pas valide.
+        </div>
+      </div>
+    </div>
+
+    <div>
+      <label for="user_address">Adresse postale</label>
+      <input type="text" id="user_address" formControlName="user_address">
+      <div *ngIf="signinForm.get('user_address')?.invalid && signinForm.get('user_address')?.touched" class="error-message">
+        L'addresse est requise.
+      </div>
+    </div>
+
+
+    <div>
+        <label for="user_birthdate">Date of Birth:</label>
+        <input type="date" formControlName="user_birthdate" class="form-control" id="user_birthdate">
+        <div *ngIf="signinForm.get('user_birthdate')?.invalid && signinForm.get('user_birthdate')?.touched" class="error-message">
+            La date de naissance est requise.
+        </div>
+    </div>
+
+  
+    <div>
+      <label for="user_password">Mot de passe</label>
+      <input type="password" id="user_password" formControlName="user_password">
+      <div *ngIf="signinForm.get('user_password')?.invalid && signinForm.get('user_password')?.touched" class="error-message">
+        Le mot de passe est requis.
+      </div>
+    </div>
+  
+    <div>
+      <label for="confirmPassword">Confirmer le mot de passe</label>
+      <input type="password" id="confirmPassword" formControlName="confirmPassword">
+      <div *ngIf="signinForm.get('confirmPassword')?.invalid && signinForm.get('confirmPassword')?.touched" class="error-message">
+        La confirmation du mot de passe est requise.
+      </div>
+      <div *ngIf="signinForm.get('confirmPassword')?.value !== signinForm.get('user_password')?.value && signinForm.get('confirmPassword')?.touched" class="error-message">
+        Les mots de passe doivent correspondre.
+      </div>
+    </div>
+  
+    <button type="submit" [disabled]="signinForm.invalid">S'inscrire</button>
+  </form>
+  

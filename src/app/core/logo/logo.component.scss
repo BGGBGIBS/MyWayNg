@@ -1,0 +1,17 @@
+.logo {
+  h1 {
+    font-size: 2.7em;
+    // background-color: #f9f9f9;
+    backdrop-filter: blur(15px); /* Effet de flou pour l'arrière-plan */
+    padding: 0.2em;
+    border: 1px solid black;
+    border-radius: 8px;
+    color: #000000;
+    position: relative; // Rend le h1 au-dessus de l'image
+    z-index: 7; // Rend le h1 au-dessus de l'image
+  }
+  :hover{
+    cursor: pointer;
+  }
+
+}

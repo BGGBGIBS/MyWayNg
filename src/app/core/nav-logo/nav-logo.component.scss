@@ -1,0 +1,46 @@
+.navlogo{
+    // background-color: #f9f9f9;
+    backdrop-filter: blur(15px); /* Effet de flou pour l'arrière-plan */
+    border-radius: 8px;
+    opacity: 80%;
+    border: 1px solid #000000;
+    padding: 0.1em;
+    position: absolute;
+    top: 0.5em;
+    left: 0.5em;
+    z-index: 7;
+    p{
+        color: #000000;
+    }
+    img{
+        height: 2em;
+    }
+    svg {
+        width: 2em; /* Ajustez la taille du SVG en fonction de vos besoins */
+        height: 2em; /* Ajustez la taille du SVG en fonction de vos besoins */
+    }
+}
+
+.menu-icon,
+.cross-icon {
+  fill: none; /* Pas de remplissage */
+  stroke: #000; /* Couleur de la ligne */
+  stroke-width: 2; /* Épaisseur de la ligne */
+  stroke-linecap: round; /* Extrémités de ligne arrondies */
+  transition: stroke 0.3s; /* Transition pour l'animation */
+  cursor: pointer; /* Curseur pointeur au survol */
+}
+
+// .menu-icon {
+//   /* Styles spécifiques à l'icône du menu */
+// }
+
+// .cross-icon {
+//   /* Styles spécifiques à l'icône de la croix */
+// }
+
+/* Styles pour l'état actif */
+.menu-icon.active,
+.cross-icon.active {
+  stroke: #fff; /* Couleur de la ligne en état actif */
+}

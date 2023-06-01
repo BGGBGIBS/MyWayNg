@@ -1,0 +1,28 @@
+<h2>Grades</h2>
+<div class="section" *ngIf="grades">
+
+  <p>{{selectedDomaine }}</p>
+    <table>
+        <thead>
+            <tr>
+                <th (click)="sort('grade_academique')">Grade académique <i class="fa fa-sort"></i></th>
+                <th (click)="sort('type_finalite')">Type de finalité <i class="fa fa-sort"></i></th>
+                <th (click)="sort('cycle')">Cycle <i class="fa fa-sort"></i></th>
+                <th (click)="sort('type_d_etablissement')">Type d'établissement <i class="fa fa-sort"></i></th>
+                <th (click)="sort('domaine_paysage')">Domaine paysage <i class="fa fa-sort"></i></th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr *ngFor="let grade of grades">
+                <td>{{ grade.grade_academique }}</td>
+                <td>{{ grade.type_finalite }}</td>
+                <td>{{ grade.cycle }}</td>
+                <td>{{ grade.type_d_etablissement }}</td>
+                <td>{{ grade.domaine_paysage }}</td>
+            </tr>
+        </tbody>
+    </table>
+</div>
+<div class="section" *ngIf="!grades">
+    <p>Loading grades...</p>
+</div>

@@ -1,0 +1,16 @@
+<div class="experience">
+    <h2>Experiences</h2>
+    <div *ngFor="let experience of experiences">
+      <div class="accordion">
+        <div class="accordion-header" (click)="experience.experience_isExpanded = !experience.experience_isExpanded">
+          <i class="fa fa-plus" *ngIf="!experience.experience_isExpanded"></i>
+          <i class="fa fa-minus" *ngIf="experience.experience_isExpanded"></i>
+          {{ experience.experience_company }} - {{ experience.experience_position }}
+        </div>
+        <div class="accordion-body" *ngIf="experience.experience_isExpanded">
+          <p>{{ experience.experience_startDate }} - {{ experience.experience_endDate }}</p>
+          <p>{{ experience.experience_description }}</p>
+        </div>
+      </div>
+    </div>
+</div>

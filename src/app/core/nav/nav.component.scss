@@ -1,0 +1,64 @@
+nav {
+    position: fixed;
+    top: 13%;
+    left: 0;
+    bottom: 0;
+    width: 20%;
+    // background-color: #333;
+    // opacity: 10%;
+    backdrop-filter: blur(5px); /* Effet de flou pour l'arrière-plan */
+
+    color: #fff;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    padding: 20px;
+  }
+  
+  .rounded-list {
+    list-style: none;
+    padding: 0;
+    flex-direction: column;
+    backdrop-filter: blur(5px); /* Effet de flou pour l'arrière-plan */
+
+  }
+  
+  li {
+    display: flex; 
+    align-items: center; 
+    font-size: 1em;
+    margin-bottom: 20px; // increased margin to add more space between items
+    padding: 10px; // increased padding to add more space around the items
+    transition: background-color 0.3s ease;
+    backdrop-filter: blur(5px); /* Effet de flou pour l'arrière-plan */
+    
+    
+    &:hover {
+      background-color: #444;
+      cursor: pointer;
+    }
+  }
+  
+  a{
+    text-shadow: 0 0 5px #000; /* Effet de texte entouré de noir */ 
+  }
+  .logout-button {
+    background-color: rgb(228, 77, 77);
+  
+    &:hover {
+      background-color: rgb(255, 0, 0);
+    }
+  }
+  
+  .link-text {
+    display: inline;
+    margin-left: 15px; // increased margin to add more space between the logo and the text
+  }
+  
+  .link-logo {
+    display: inline;
+    width: 25px; // increased size for better visibility
+    height: 25px; // increased size for better visibility
+    margin-right: 10px; // added to create space between the logo and the text
+  }
+  

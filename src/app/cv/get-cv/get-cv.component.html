@@ -1,0 +1,13 @@
+<div class="cv">    
+  <div *ngIf="records">
+    <div class="event experience" *ngFor="let record of records">
+      <h3>{{ record.event.occupation.occupation_name }}</h3>
+      <p>{{ record.event.institution.institution_name }} - {{ record.event.institution.institution_type }}</p>
+      <p>{{ record.event.event_begin | date: 'dd/MM/yyyy' }} - {{ record.event.event_end | date: 'dd/MM/yyyy' }}</p>
+      <p>{{ record.grade.grade_name }} - {{ record.grade.grade_value }} / {{ record.grade.scale.scale_max }}</p>
+    </div>
+  </div>
+  <div *ngIf="!records">
+    <p class="lifeday">Loading Cv...</p>
+  </div>
+</div>

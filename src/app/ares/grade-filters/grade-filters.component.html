@@ -1,0 +1,31 @@
+<!-- Filtres spécifiques à la route grade -->
+<div>
+  <label for="cycleFilter">Cycle :</label>
+  <select id="cycleFilter" [(ngModel)]="cycleFilter">
+    <option value="">Tous les cycles</option>
+    <option value="1er cycle">1er cycle</option>
+    <option value="2e cycle">2e cycle</option>
+    <option value="3e cycle">3e cycle</option>
+  </select>
+</div>
+
+<div>
+  <label for="typeEtablissementFilter">Type d'établissement :</label>
+  <select id="typeEtablissementFilter" [(ngModel)]="typeEtablissementFilter">
+    <option value="">Tous les types d'établissement</option>
+    <option value="université">Université</option>
+    <option value="haute école">Haute école</option>
+    <option value="promotion sociale">Promotion sociale</option>
+  </select>
+</div>
+
+<div>
+  <label for="domainePaysageFilter">Domaine paysage :</label>
+  <input
+    type="text"
+    id="domainePaysageFilter"
+    [(ngModel)]="domainePaysageFilter"
+  />
+</div>
+
+<button (click)="applyFilters()">Appliquer les filtres</button>

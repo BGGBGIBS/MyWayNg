@@ -1,0 +1,70 @@
+<h2>Institutions</h2>
+<div class="section" *ngIf="institutions">
+  <table>
+    <thead>
+      <tr>
+        <th (click)="sort('type_d_etablissement')">Type d'établissement <i class="fa fa-sort"></i></th>
+        <th (click)="sort('actif')">Actif <i class="fa fa-sort"></i></th>
+        <!-- <th (click)="sort('ndegfae_etablissement')">N° faE <i class="fa fa-sort"></i></th> -->
+        <th (click)="sort('nom_usuel_etablissement')">Nom usuel <i class="fa fa-sort"></i></th>
+        <th (click)="sort('nom_court_etablissement')">Nom court <i class="fa fa-sort"></i></th>
+        <th (click)="sort('adresse_etablissement')">Adresse <i class="fa fa-sort"></i></th>
+        <th (click)="sort('code_postal_etablissement')">Code postal <i class="fa fa-sort"></i></th>
+        <th (click)="sort('localite_etablissement')">Localité <i class="fa fa-sort"></i></th>
+        <!-- <th (click)="sort('commune_etablissement')">Commune <i class="fa fa-sort"></i></th>
+        <th (click)="sort('bassin_etablissement')">Bassin <i class="fa fa-sort"></i></th>
+        <th (click)="sort('arrondissement_administratif_etablissement')">Arrondissement administratif <i class="fa fa-sort"></i></th>
+        <th (click)="sort('arrondissement_judiciaire_etablissement')">Arrondissement judiciaire <i class="fa fa-sort"></i></th>
+        <th (click)="sort('province_etablissement')">Province <i class="fa fa-sort"></i></th> -->
+        <th (click)="sort('region_etablissement')">Région <i class="fa fa-sort"></i></th>
+        <!-- <th (click)="sort('latitude_etablissement')">Latitude <i class="fa fa-sort"></i></th>
+        <th (click)="sort('longitude_etablissement')">Longitude <i class="fa fa-sort"></i></th> -->
+        <th (click)="sort('url_du_site_web')">Site web <i class="fa fa-sort"></i></th>
+        <th (click)="sort('nom_du_po_usuel')">Nom PO usuel <i class="fa fa-sort"></i></th>
+        <!-- <th (click)="sort('forme_juridique')">Forme juridique <i class="fa fa-sort"></i></th> -->
+        <th (click)="sort('organe_de_representation')">Organe de représentation <i class="fa fa-sort"></i></th>
+        <th (click)="sort('reseau_officiel_libre')">Réseau officiel libre <i class="fa fa-sort"></i></th>
+        <th (click)="sort('reseau_subventionne_organise')">Réseau subventionné organisé <i class="fa fa-sort"></i></th>
+        <th (click)="sort('type_organisateur')">Type organisateur <i class="fa fa-sort"></i></th>
+        <th (click)="sort('communaute')">Communauté <i class="fa fa-sort"></i></th>
+        <th (click)="sort('caractere_confessionnel')">Caractère confessionnel <i class="fa fa-sort"></i></th>
+        <!-- <th (click)="sort('date_ouverture_etablissement')">Date d'ouverture <i class="fa fa-sort"></i></th>
+        <th (click)="sort('date_fermeture_etablissement')">Date de fermeture <i class="fa fa-sort"></i></th> -->
+      </tr>
+    </thead>
+    <tbody>
+      <tr *ngFor="let institution of institutions">
+        <td>{{ institution.type_d_etablissement }}</td>
+        <td>{{ institution.actif }}</td>
+        <!-- <td>{{ institution.ndegfae_etablissement }}</td> -->
+        <td>{{ institution.nom_usuel_etablissement }}</td>
+        <td>{{ institution.nom_court_etablissement }}</td>
+        <td>{{ institution.adresse_etablissement }}</td>
+        <td>{{ institution.code_postal_etablissement }}</td>
+        <td>{{ institution.localite_etablissement }}</td>
+        <!-- <td>{{ institution.commune_etablissement }}</td>
+        <td>{{ institution.bassin_etablissement }}</td>
+        <td>{{ institution.arrondissement_administratif_etablissement }}</td>
+        <td>{{ institution.arrondissement_judiciaire_etablissement }}</td>
+        <td>{{ institution.province_etablissement }}</td> -->
+        <td>{{ institution.region_etablissement }}</td>
+        <!-- <td>{{ institution.latitude_etablissement }}</td>
+        <td>{{ institution.longitude_etablissement }}</td> -->
+        <td>{{ institution.url_du_site_web }}</td>
+        <td>{{ institution.nom_du_po_usuel }}</td>
+        <!-- <td>{{ institution.forme_juridique }}</td> -->
+        <td>{{ institution.organe_de_representation }}</td>
+        <td>{{ institution.reseau_officiel_libre }}</td>
+        <td>{{ institution.reseau_subventionne_organise }}</td>
+        <td>{{ institution.type_organisateur }}</td>
+        <td>{{ institution.communaute }}</td>
+        <td>{{ institution.caractere_confessionnel }}</td>
+        <!-- <td>{{ institution.date_ouverture_etablissement }}</td>
+        <td>{{ institution.date_fermeture_etablissement }}</td> -->
+      </tr>
+    </tbody>
+  </table>
+</div>
+<div class="section" *ngIf="!institutions">
+    <p>Loading Institutions...</p>
+</div>    

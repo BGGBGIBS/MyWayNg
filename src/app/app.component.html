@@ -1,0 +1,8 @@
+<app-topper />
+<!-- <button (click)="toggleNav()">Toggle Nav</button> -->
+
+<app-nav *ngIf="display$ | async" />
+<!-- <app-nav/> -->
+<router-outlet class="component"></router-outlet>
+
+<app-footer />

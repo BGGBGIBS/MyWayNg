@@ -1,0 +1,94 @@
+<form [formGroup]="recordForm" (ngSubmit)="onSubmit()">
+
+    <!-- User fields -->
+    <div>
+      <label for="user_firstname">Prénom:</label>
+      <input type="text" formControlName="user_firstname">
+    </div>
+  
+    <div>
+      <label for="user_lastname">Nom:</label>
+      <input type="text" formControlName="user_lastname">
+    </div>
+  
+    <div>
+      <label for="user_email">Email:</label>
+      <input type="email" formControlName="user_email">
+    </div>
+  
+    <div>
+      <label for="user_birthdate">Date de naissance:</label>
+      <input type="date" formControlName="user_birthdate">
+    </div>
+  
+    <div>
+      <label for="user_address">Adresse:</label>
+      <input type="text" formControlName="user_address">
+    </div>
+  
+    <!-- Event fields -->
+    <div>
+      <label for="event_begin">Début de l'événement:</label>
+      <input type="datetime-local" formControlName="event_begin">
+    </div>
+  
+    <div>
+      <label for="event_end">Fin de l'événement:</label>
+      <input type="datetime-local" formControlName="event_end">
+    </div>
+  
+    <div>
+      <label for="event_type">Type d'événement:</label>
+      <input type="text" formControlName="event_type">
+    </div>
+  
+    <div>
+      <label for="occupation_name">Nom de l'occupation:</label>
+      <input type="text" formControlName="occupation_name">
+    </div>
+  
+    <div>
+      <label for="institution_name">Nom de l'institution:</label>
+      <input type="text" formControlName="institution_name">
+    </div>
+  
+    <!-- Skill fields -->
+    <div>
+      <label for="skill_name">Nom de la compétence:</label>
+      <input type="text" formControlName="skill_name">
+    </div>
+  
+    <div>
+      <label for="skill_description">Description de la compétence:</label>
+      <input type="text" formControlName="skill_description">
+    </div>
+  
+    <div>
+      <label for="skill_type">Type de compétence:</label>
+      <input type="checkbox" formControlName="skill_type">
+    </div>
+  
+    <!-- Grade fields -->
+    <div>
+      <label for="grade_name">Nom de la note:</label>
+      <input type="text" formControlName="grade_name">
+    </div>
+  
+    <div>
+      <label for="grade_value">Valeur de la note:</label>
+      <input type="number" formControlName="grade_value">
+    </div>
+  
+    <div>
+      <label for="scale_min">Échelle minimum:</label>
+      <input type="number" formControlName="scale_min">
+    </div>
+  
+    <div>
+      <label for="scale_max">Échelle maximum:</label>
+      <input type="number" formControlName="scale_max">
+    </div>
+  
+    <button type="submit">Ajouter</button>
+  </form>
+  

@@ -1,0 +1,22 @@
+<!-- Filtres spécifiques à la route institution -->
+<div>
+    <label for="actifFilter">Actif :</label>
+    <select id="actifFilter" [(ngModel)]="actifFilter">
+      <option value="false">Non</option>
+      <option value="true">Oui</option>
+    </select>
+  </div>
+  
+  <div>
+    <label for="localiteFilter">Localité :</label>
+    <select id="localiteFilter" [(ngModel)]="localiteFilter">
+      <option value="">Toutes les localités</option>
+      <option value="MONS">Mons</option>
+      <option value="NAMUR">Namur</option>
+      <option value="LIEGE">Liège</option>
+      <option value="BRUXELLES">Bruxelles</option>
+    </select>
+  </div>
+  
+  <button (click)="applyFilters()">Appliquer les filtres</button>
+  

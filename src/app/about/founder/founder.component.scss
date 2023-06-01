@@ -1,0 +1,73 @@
+div {
+    font-family: 'Arial', sans-serif;
+    color: #333;
+    line-height: 1.6;
+  
+    h1 {
+      color: #4a4a4a;
+      font-size: 2em;
+      margin-bottom: 1em;
+      text-align: center;
+    }
+  
+    section {
+      margin-bottom: 2em;
+  
+      h2 {
+        font-size: 1.5em;
+        color: #666;
+        margin-bottom: 0.5em;
+      }
+  
+      p {
+        font-size: 1em;
+        color: #4a4a4a;
+      }
+  
+      // img {
+      //   max-width: 100%;
+      //   height: auto;
+      //   display: block;
+      //   margin-left: auto;
+      //   margin-right: auto;
+      // }
+
+    }
+  }
+  img {
+    width: 100%; // This makes sure the image is responsive and doesn't overflow its container
+    height: auto;
+    border-radius: 50%; // This will make the image circular
+    border: 3px solid #333; // This adds a border around the image
+    margin-top: 20px; // Adds some space between the text and the image
+  }
+  
+  @media (min-width: 768px) { // This is typically the width at which you switch from mobile to desktop styles
+    img {
+      max-width: 400px; // or whatever maximum size you want for desktop
+    }
+  }
+  
+  .parallax {
+    /* The image used */
+    background-image: url("../../../assets/profile.JPG");
+  
+    /* Set a specific height */
+    min-height: 15vh;
+  
+    /* Create the parallax scrolling effect */
+    background-attachment: fixed;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    width: 100%;
+  }
+  @media (max-width: 600px) {
+    .parallax {
+      /* Set the background size to 100% to ensure it covers the full width on mobile devices */
+      background-size: cover;
+      
+      /* You might need to adjust the height to maintain the aspect ratio */
+      height: 2vh;
+    }
+  }

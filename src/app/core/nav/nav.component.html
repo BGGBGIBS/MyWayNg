@@ -1,0 +1,21 @@
+<nav *ngIf="(display$ | async)">
+  <ul class="rounded-list">
+    <li class="rounded-list" *ngFor="let link of appLinks; index as i;" [routerLink]="link.path" (click)="toggleDisplay()">
+      <a >
+        <!-- <img class="link-logo" [src]="link.logo" [alt]="link.title"> -->
+        <span class="link-text">{{ link.title }}</span>
+      </a>
+      <ul class="rounded-list" *ngIf="link.children" >
+        <li class="rounded-list" *ngFor="let subLink of link.children" [routerLink]="link.path + '/' + subLink.path" (click)="toggleDisplay()">
+          <a >{{ subLink.title }}</a>
+        </li>
+      </ul>
+    </li>
+    <li class="rounded-list logout-button" *ngIf="(connected$ | async)" (click)="logout()">
+      <a >
+        <!-- <img class="link-logo" src="assets/img/logo-logout.svg" alt="Log Out"> -->
+        <span class="link-text">Log Out</span>
+      </a>
+    </li>
+  </ul>
+</nav>

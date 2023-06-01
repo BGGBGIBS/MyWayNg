@@ -1,0 +1,15 @@
+<!-- <div class="component">
+    <div>
+
+        <h2 (click)="toggleIsNew()" [class.active]="isNew === false">Log In</h2>
+        <h2 (click)="toggleIsNew()" [class.active]="isNew === true">Sign Up</h2>
+        <app-form-login *ngIf="!isNew" />
+        <app-form-signin *ngIf="isNew"/>
+    </div>
+</div> -->
+
+<div class="component">
+    <h1>In</h1>
+    <app-crud-bar/>
+    <router-outlet/>
+</div>

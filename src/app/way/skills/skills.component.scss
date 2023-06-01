@@ -1,0 +1,24 @@
+.skills
+{
+    ul {
+        padding-left: 0;
+      }
+      
+      li {
+        color: #333;
+        font-family: 'Helvetica', 'Arial', sans-serif;
+        font-size: 16px;
+        line-height: 1.5;
+        margin-right: 8px;
+        margin-bottom: 8px;
+        list-style-type: none;
+        padding: 8px 12px;
+        border: 1px solid #ccc;
+        border-radius: 4px;
+        display: inline-block;
+      }
+      
+      li:nth-child(odd) {
+        color: #c72d2d;
+      }
+}

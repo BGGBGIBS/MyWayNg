@@ -1,0 +1,19 @@
+footer {
+    position: fixed;
+    bottom: 0;
+    right: 0;
+    left: 0;//20%;
+    width: auto;
+    height: 4%;
+    // background-color: #333;
+  backdrop-filter: blur(15px); /* Effet de flou pour l'arrière-plan */
+
+    color: #fff;
+    text-align: center;
+    float: right;
+    p{
+        font-size: 0.7em;
+    text-shadow: 0 0 5px #000; /* Effet de texte entouré de noir */ 
+
+    }
+}

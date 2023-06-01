@@ -1,0 +1,37 @@
+.personal-info {
+    margin: 20px 0;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    background-color: #f1f1f1;
+    padding: 10px;
+    border-radius: 5px;
+    a{
+      font-size: 0.8em;
+    }
+  
+    p {
+      margin-bottom: 10px;
+      display: flex;
+      align-items: center;
+      flex-basis: calc(50% - 10px);
+  
+      &:nth-child(odd) {
+        margin-right: 20px;
+      }
+  
+      span {
+        display: inline-block;
+        width: 20px;
+        height: 20px;
+        margin-right: 10px;
+        border-radius: 50%;
+        background-color: #333;
+        color: #fff;
+        font-size: 0.8em;
+        font-weight: bold;
+        text-align: center;
+        line-height: 20px;
+      }
+    }
+  }

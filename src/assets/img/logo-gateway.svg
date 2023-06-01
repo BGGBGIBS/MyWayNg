@@ -1,0 +1,25 @@
+<!-- Noir -->
+<!-- <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24">
+    <rect x="0" y="0" width="24" height="24" fill="#e4e4e4" />
+    <g fill="#333333" stroke="#333333">
+        <path d="M6,18 L12,9 L18,18" stroke-width="0.625" fill="none" />
+        <circle cx="12" cy="9" r="0.75" />
+        <rect x="11.5" y="9" width="2" height="6.25" />
+    </g>
+    <text x="12" y="22.5" font-size="2.25" font-family="Arial" font-weight="bold" text-anchor="middle">
+        Gateway
+    </text>
+</svg> -->
+
+<!-- Blanc -->
+<svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24">
+    <rect x="0" y="0" width="24" height="24" fill="#1b1b1b" />
+    <g fill="#cccccc" stroke="#cccccc">
+        <path d="M6,18 L12,9 L18,18" stroke-width="0.625" fill="none" />
+        <circle cx="12" cy="9" r="0.75" />
+        <rect x="11.5" y="9" width="2" height="6.25" />
+    </g>
+    <text x="12" y="22.5" font-size="2.25" font-family="Arial" font-weight="bold" text-anchor="middle" fill="#ffffff">
+        Gateway
+    </text>
+</svg>

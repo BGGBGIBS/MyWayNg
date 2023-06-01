@@ -1,0 +1,31 @@
+.nav-container {
+  display: flex;
+  justify-content: space-around;
+  flex-wrap: wrap;
+  width: 100%;
+  max-width: 800px;  // Limiter la largeur maximale pour une meilleure présentation sur les grands écrans
+  margin: 0 auto;   // Centrer le conteneur
+  padding: 20px;
+  background-color: #FFFFFF;
+  border-radius: 10px;
+  box-shadow: 0 1px 6px rgba(0, 0, 0, 0.1);
+}
+
+.nav-button {
+  flex: 1 1 auto;    // Permettre aux boutons de s'adapter à la largeur du conteneur
+  margin: 10px;
+  padding: 10px 20px;
+  border: 1px solid #BDBDBD;
+  border-radius: 4px;
+  background-color: #FFFFFF;
+  color: #757575;
+  font-size: 16px;
+  text-align: center;
+  cursor: pointer;
+  transition: all 0.3s;
+
+  &:hover {
+    background-color: #EEEEEE;
+    color: #333333;
+  }
+}

@@ -1,0 +1,8 @@
+<div class="component">
+    <h1>ARES</h1>
+    <app-crud-bar (filterEvent)="onFilterEvent($event)"/>
+    <app-filters (filtresAppliques)="appliquerFiltres($event)"></app-filters>
+
+    <!-- <app-grades [selectedDomaine]="selectedDomaine"></app-grades> -->
+    <router-outlet/>
+</div>

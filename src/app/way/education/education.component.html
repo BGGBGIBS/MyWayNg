@@ -1,0 +1,24 @@
+<!-- <div class="education">
+  <ul>
+    <li *ngFor="let ed of educations" [class.day]="ed.time === 'day'" [class.night]="ed.time === 'night'">
+        <h4>{{ ed.degree }}</h4>
+        <p>{{ ed.institution }}, {{ ed.location }}</p>
+        <p>{{ ed.startDate | date:'MMM yyyy' }} - {{ ed.endDate | date:'MMM yyyy' }}</p>
+        <p *ngIf="ed.time === 'day'">Jour</p>
+        <p *ngIf="ed.time === 'night'">Soir</p>
+    </li>
+  </ul>
+</div> -->
+
+
+<div class="education">
+  <div class="timeline">
+    <div *ngFor="let ed of educations" class="timeline-item" [ngClass]="{ 'night': ed.type === 'night', 'day': ed.type === 'day' }">
+        <div class="timeline-content">
+            <h4>{{ ed.degree }}</h4>
+            <p>{{ ed.institution }}, {{ ed.location }}</p>
+            <p>{{ ed.startDate | date:'MMM yyyy' }} - {{ ed.endDate | date:'MMM yyyy' }}</p>
+        </div>
+    </div>
+  </div>
+</div>

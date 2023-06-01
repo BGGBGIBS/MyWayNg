@@ -1,0 +1,28 @@
+<h2>Passerelles</h2>
+<div class="section" *ngIf="passerelles">
+    <table>
+        <thead>
+            <tr>
+                <th (click)="sort('code_etudes_bachelier')">Code études bachelier <i class="fa fa-sort"></i></th>
+                <th (click)="sort('intitule_des_etudes_bachelier')">Intitulé des études bachelier <i class="fa fa-sort"></i></th>
+                <th (click)="sort('code_etudes_master')">Code études master <i class="fa fa-sort"></i></th>
+                <th (click)="sort('intitule_des_etudes_master')">Intitulé des études master <i class="fa fa-sort"></i></th>
+                <th (click)="sort('credits_ects_min')">Crédits ECTS min <i class="fa fa-sort"></i></th>
+                <th (click)="sort('credits_ects_max')">Crédits ECTS max <i class="fa fa-sort"></i></th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr *ngFor="let passerelle of passerelles">
+                <td>{{ passerelle.code_etudes_bachelier }}</td>
+                <td>{{ passerelle.intitule_des_etudes_bachelier }}</td>
+                <td>{{ passerelle.code_etudes_master }}</td>
+                <td>{{ passerelle.intitule_des_etudes_master }}</td>
+                <td>{{ passerelle.credits_ects_min }}</td>
+                <td>{{ passerelle.credits_ects_max }}</td>
+            </tr>
+        </tbody>
+    </table>
+</div>
+<div class="section" *ngIf="!passerelles">
+    <p>Loading passerelles...</p>
+</div>

@@ -1,0 +1,13 @@
+<!-- Filtres spécifiques à la route passerelle -->
+<div>
+    <label for="intituleEtudesBachelierFilter">Intitulé des études de bachelier :</label>
+    <input type="text" id="intituleEtudesBachelierFilter" [(ngModel)]="intituleEtudesBachelierFilter">
+  </div>
+  
+  <div>
+    <label for="intituleEtudesMasterFilter">Intitulé des études de master :</label>
+    <input type="text" id="intituleEtudesMasterFilter" [(ngModel)]="intituleEtudesMasterFilter">
+  </div>
+  
+  <button (click)="applyFilters()">Appliquer les filtres</button>
+  

@@ -1,0 +1,142 @@
+.cv {
+  max-width: 900px;
+  margin: 0 auto;
+  padding: 20px;
+  border: 2px solid #000;
+  border-radius: 10px;
+  background-color: #f9f9f9;
+  color: #333;
+  font-family: Arial, sans-serif;
+          
+
+  .header {
+    display: flex;
+    justify-content: space-between;
+
+    .name-tagline {
+      h2 {
+        font-size: 2.2em;
+        margin-bottom: 0;
+      }
+
+      h3 {
+        font-size: 1.5em;
+        color: #888;
+        margin-top: 0;
+      }
+    }
+
+    .photo {
+      width: 100px;
+      height: 100px;
+      overflow: hidden;
+      border-radius: 50%;
+
+      img {
+        width: 100%;
+        height: auto;
+      }
+    }
+  }
+
+  .personal-info {
+      margin: 20px 0;
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: space-between;
+      background-color: #f1f1f1;
+      padding: 10px;
+      border-radius: 5px;
+    
+      p {
+        margin-bottom: 10px;
+        display: flex;
+        align-items: center;
+        flex-basis: calc(50% - 10px);
+    
+        &:nth-child(odd) {
+          margin-right: 20px;
+        }
+    
+        span {
+          display: inline-block;
+          width: 20px;
+          height: 20px;
+          margin-right: 10px;
+          border-radius: 50%;
+          background-color: #333;
+          color: #fff;
+          font-size: 0.8em;
+          font-weight: bold;
+          text-align: center;
+          line-height: 20px;
+        }
+      }
+    }
+    
+
+  h3 {
+    font-size: 1.4em;
+    margin-top: 20px;
+    border-bottom: 1px solid #333;
+    padding-bottom: 5px;
+  }
+
+  .about blockquote {
+    font-style: italic;
+    color: #666;
+  }
+
+  .experience,
+  .education {
+    li {
+      color: #333;
+      margin-bottom: 10px;
+      font-size: 1.1em;
+      list-style-type: none;
+    }
+  
+    h4 {
+      font-size: 1.2em;
+      margin-top: 15px;
+      margin-bottom: 10px;
+      font-weight: 600;
+    }
+  
+    p {
+      margin-left: 20px;
+      line-height: 1.5;
+      font-size: 1em;
+    }
+  }
+  
+  .skills,
+  .learning,
+  .personality,
+  .languages{
+      ul {
+          padding-left: 0;
+        }
+        
+        li {
+          color: #333;
+          font-family: 'Helvetica', 'Arial', sans-serif;
+          font-size: 16px;
+          line-height: 1.5;
+          margin-right: 8px;
+          margin-bottom: 8px;
+          list-style-type: none;
+          padding: 8px 12px;
+          border: 1px solid #ccc;
+          border-radius: 4px;
+          display: inline-block;
+        }
+        
+        li:nth-child(odd) {
+          color: #c72d2d;
+        }
+  }
+  .lifeday{
+      color: #000;
+  }
+}

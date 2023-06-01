@@ -1,0 +1,23 @@
+<div class="component">
+    <h2>Users</h2>
+    <div *ngIf="users">
+    <ul class="user-list">
+      <li *ngFor="let user of users" class="user-list-item">
+        <div class="user-info" (click)="showUserDetails(user.user_id)">
+          <span class="user-id">{{ user.user_id }}</span>
+          <h2 class="user-name">{{ user.user_firstname }}, {{ user.user_lastname }}</h2>
+          <div class="user-details" *ngIf="selectedUserId === user.user_id">
+            <span class="user-birthdate"> {{ user.user_birthdate | age }} yo —</span>
+            <span class="user-address"> {{ user.user_address }} —</span>
+            <span class="user-email"> {{ user.user_email }} —</span>
+            <span class="user-role"> {{ user.user_role }} </span>
+          </div>
+        </div>
+        <!-- <button class="user-details-btn" (click)="deleteUser(user.user_id)">Delete</button> -->
+      </li>
+    </ul>
+    </div>
+    <div **ngIf="!users">
+          <p>Loading users...</p>
+      </div>
+</div>

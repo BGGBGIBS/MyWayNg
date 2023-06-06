@@ -11,7 +11,7 @@ const routes: Routes = [
     children: [
       { path: '', redirectTo: 'project', pathMatch: 'full' },
       { path: 'project', component: ProjectComponent },
-      // { path: 'founder', component: FounderComponent },
+      { path: 'founder', component: FounderComponent },
       {path: 'way', loadChildren:() => import('../way/way.module').then((m)=> m.HomeModule)},
       { path: 'token', loadChildren:()=> import('./token/token.module').then((m)=>m.TokenModule)},
     ],

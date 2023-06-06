@@ -1,24 +1,29 @@
-<!-- <div class="education">
-  <ul>
-    <li *ngFor="let ed of educations" [class.day]="ed.time === 'day'" [class.night]="ed.time === 'night'">
-        <h4>{{ ed.degree }}</h4>
-        <p>{{ ed.institution }}, {{ ed.location }}</p>
-        <p>{{ ed.startDate | date:'MMM yyyy' }} - {{ ed.endDate | date:'MMM yyyy' }}</p>
-        <p *ngIf="ed.time === 'day'">Jour</p>
-        <p *ngIf="ed.time === 'night'">Soir</p>
-    </li>
-  </ul>
-</div> -->
-
-
 <div class="education">
   <div class="timeline">
-    <div *ngFor="let ed of educations" class="timeline-item" [ngClass]="{ 'night': ed.type === 'night', 'day': ed.type === 'day' }">
+    <div *ngFor="let ed of educations" class="timeline-item" [ngClass]="{ 'night': ed.education_type === 'night', 'day': ed.education_type === 'day' }">
         <div class="timeline-content">
-            <h4>{{ ed.degree }}</h4>
-            <p>{{ ed.institution }}, {{ ed.location }}</p>
-            <p>{{ ed.startDate | date:'MMM yyyy' }} - {{ ed.endDate | date:'MMM yyyy' }}</p>
+            <h4>{{ ed.education_degree }}</h4>
+            <p>{{ ed.education_institution }}, {{ ed.education_location }}</p>
+            <p>{{ ed.education_startYear | date:'MMM yyyy' }} - {{ ed.education_endYear | date:'MMM yyyy' }}</p>
         </div>
     </div>
   </div>
 </div>
+
+<!-- <div class="education">
+  <div class="timeline">
+    <div *ngFor="let group of educationGroups" 
+         class="timeline-item-group" 
+         [style.width]="getWidthOfGroup(group)">
+      <div *ngFor="let ed of group" 
+           class="timeline-item" 
+           [ngClass]="{ 'night': ed.education_type === 'night', 'day': ed.education_type === 'day' }">
+        <div class="timeline-content">
+            <h4>{{ ed.education_degree }}</h4>
+            <p>{{ ed.education_institution }}, {{ ed.education_location }}</p>
+            <p>{{ ed.education_startYear | date:'MMM yyyy' }} - {{ ed.education_endYear | date:'MMM yyyy' }}</p>
+        </div>
+      </div>
+    </div>
+  </div>
+</div> -->

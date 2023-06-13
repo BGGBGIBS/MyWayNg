@@ -3,6 +3,8 @@ import { CommonModule } from '@angular/common';
 
 import { PaypalRoutingModule } from './paypal-routing.module';
 import { PaypalComponent } from './paypal/paypal.component';
+import { NgxPayPalModule } from 'ngx-paypal';
+import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 
 
 @NgModule({
@@ -11,7 +13,10 @@ import { PaypalComponent } from './paypal/paypal.component';
   ],
   imports: [
     CommonModule,
-    PaypalRoutingModule
+    PaypalRoutingModule,
+    FormsModule,
+    ReactiveFormsModule,
+    NgxPayPalModule
   ],
   exports: [
     PaypalComponent

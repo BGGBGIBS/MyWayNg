@@ -43,6 +43,11 @@ export const routes: Routes = [
     loadChildren: () => import('./in/in.module').then((m) => m.InModule),
   },
   {
+    path: 'pay',
+    title: 'Pay',
+    loadChildren: () => import('./pay/pay.module').then((m) => m.PayModule),
+  },
+  {
     path: 'redirect',
     title: 'Redirect',
     loadChildren: () =>
@@ -98,6 +103,11 @@ export const navLinks = [
     title: 'In',
     logo: 'assets/img/logo-in.svg',
     loadChildren: () => import('./in/in.module').then((m) => m.InModule),
+  },
+  {
+    path: 'pay',
+    title: 'Pay',
+    loadChildren: () => import('./pay/pay.module').then((m) => m.PayModule),
   },
 ];
 

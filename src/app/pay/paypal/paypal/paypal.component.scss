@@ -1,0 +1,98 @@
+#paypal-button-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 20px;
+}
+
+.paypal-button-container {
+  // Styles pour tous les boutons PayPal sur le site
+  padding: 10px;
+  background-color: #f5f5f5;
+  border-radius: 5px;
+}
+
+.card_container {
+  padding: 20px;
+  background-color: #fff;
+  border-radius: 5px;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+
+#card-form {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.card_field {
+  padding: 10px;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  margin-bottom: 10px;
+  width: 100%;
+}
+
+#card-number, #expiration-date, #cvv {
+  margin-bottom: 10px;
+}
+
+#card-holder-name, #card-billing-address-country {
+  font-family: helvetica;
+  font-size: 14px;
+  width: 760px;
+  padding: 10px;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  margin-bottom: 10px;
+}
+
+#card-billing-address-country {
+  margin-top: 10px;
+}
+
+#submit {
+  width: 760px;
+  height: 50px;
+  background: #009c74;
+  color: white;
+  border-radius: 5px;
+  font-size: 18px;
+  font-weight: bold;
+  cursor: pointer;
+  transition: background 0.3s ease;
+  
+  &:hover {
+    background: #007a5a;
+  }
+}
+
+[style*="flex-direction: row"] {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+
+  > div {
+    &:nth-child(2) {
+      margin-left: 10px;
+
+      #cvv {
+        margin-left: 50px;
+      }
+    }
+  }
+}
+
+#payments-sdk__contingency-lightbox {
+  // hypothétiquement un lightbox pour les paiements
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(0,0,0,0.5);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  z-index: 1000;
+}

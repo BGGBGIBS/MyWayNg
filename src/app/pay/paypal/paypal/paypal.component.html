@@ -1,0 +1,43 @@
+<div id="paypal-button-container" class="paypal-button-container component" align="center"></div> 
+<div>
+  <p style = "text-align: center;">OR </p>
+</div>
+<div class="card_container">
+  <form id="card-form" #cardForm="ngForm" (ngSubmit)="onSubmitForm(cardForm.value)">
+    <div id="card-number" class="card_field" ></div>
+    <div style="display: flex; flex-direction: row;">
+      <div>
+        <div id="expiration-date" class="card_field" ></div>
+      </div>
+      <div style="margin-left: 10px;">
+        <div id="cvv" class="card_field" style="margin-left: 50px"></div>
+      </div>
+    </div>
+      <div>
+    <input
+            type="text"
+            id="card-holder-name"
+            name="card-holder-name"
+            autocomplete="off"
+            placeholder="Name on Card"
+            class="card-field"
+            style=" font-family:helvetica; font-size:14px; width:760px;"
+            [(ngModel)]="name"
+    />
+  <div>
+      <input
+              type="text"
+              id="card-billing-address-country"
+              name="card-billing-address-country"
+              autocomplete="off"
+              placeholder="Country Code"
+              style="font-family:helvetica; font-size:14px; width:760px; margin-top:10px"
+              [(ngModel)]="country"
+      />
+    </div>
+    </div>
+    <br /><br />
+    <button value="submit" id="submit" class="btn" style="width:760px; height:50px; background:#009c74; color:white">PAY</button>
+  </form>
+</div>
+<div id="payments-sdk__contingency-lightbox"></div>

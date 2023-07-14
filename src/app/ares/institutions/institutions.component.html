@@ -64,6 +64,10 @@
       </tr>
     </tbody>
   </table>
+  <div>
+    <button (click)="previousPage()" [disabled]="pageIndex === 0">Précédent</button>
+    <button (click)="nextPage()" [disabled]="pageIndex >= getLastPageIndex()">Suivant</button>
+</div>
 </div>
 <div class="section" *ngIf="!institutions">
     <p>Loading Institutions...</p>

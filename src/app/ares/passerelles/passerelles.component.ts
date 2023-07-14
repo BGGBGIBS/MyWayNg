@@ -15,6 +15,10 @@ export class PasserellesComponent {
   passerellesSubscription: Subscription | undefined;
 
 
+  pageSize: number = 20;
+  pageIndex: number = 0;
+
+
   constructor(private aresService: AresService) {}
 
   ngOnInit(): void {
@@ -39,6 +43,19 @@ export class PasserellesComponent {
         console.log('COMPLETE');
       },
     });
+  }
+  nextPage(): void {
+    this.pageIndex++;
+  }
+
+  previousPage(): void {
+    if (this.pageIndex > 0) {
+      this.pageIndex--;
+    }
+  }
+
+  getLastPageIndex(): number {
+    return Math.ceil(this.passerelles.length / this.pageSize) - 1;
   }
   sort(sortType: SortType) {
     if (this.sortType === sortType) {

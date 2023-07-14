@@ -11,6 +11,9 @@ import { AresService } from 'src/app/services/ares/ares.service';
 export class InstitutionsComponent{
   institutions!: AresInstitution[];
 
+  pageSize: number = 20;
+  pageIndex: number = 0;
+
   constructor(private aresService: AresService) {}
   sortType: SortType = 'type_d_etablissement';
   sortReverse: boolean = false;
@@ -38,6 +41,19 @@ export class InstitutionsComponent{
         console.log('COMPLETE');
       },
     });
+  }
+  nextPage(): void {
+    this.pageIndex++;
+  }
+
+  previousPage(): void {
+    if (this.pageIndex > 0) {
+      this.pageIndex--;
+    }
+  }
+
+  getLastPageIndex(): number {
+    return Math.ceil(this.institutions.length / this.pageSize) - 1;
   }
   sort(sortType: SortType) {
     if (this.sortType === sortType) {

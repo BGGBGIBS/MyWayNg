@@ -1,0 +1,74 @@
+h2 {
+    text-align: center;
+    color: #333;
+}
+
+.section {
+    margin: 0 auto;
+    max-width: 1200px;
+
+    p {
+        font-size: 1.2em;
+        color: #666;
+    }
+
+    table {
+        width: 100%;
+        border-collapse: collapse;
+        margin-top: 20px;
+        font-size: 0.9em;
+
+        th {
+            background-color: #f3f3f3;
+            color: #333;
+            padding: 10px;
+            text-align: left;
+            cursor: pointer;
+            position: sticky;
+            top: 0;
+
+            i {
+                margin-left: 5px;
+            }
+        }
+
+        td {
+            padding: 10px;
+            border-bottom: 1px solid #f3f3f3;
+        }
+
+        tr:hover {
+            background-color: #e8e8e8;
+        }
+    }
+
+    button {
+        margin-top: 20px;
+        padding: 10px 20px;
+        background-color: #808080;
+        color: white;
+        border: none;
+        border-radius: 5px;
+        cursor: pointer;
+        transition: background-color 0.3s ease;
+
+        &:hover {
+            background-color: #666;
+        }
+
+        &:disabled {
+            background-color: #ccc;
+            cursor: not-allowed;
+        }
+    }
+
+    button:not(:last-child) {
+        margin-right: 10px;
+    }
+}
+
+.loading {
+    text-align: center;
+    font-size: 1.2em;
+    color: #666;
+}

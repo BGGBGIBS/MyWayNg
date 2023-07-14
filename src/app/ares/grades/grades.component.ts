@@ -13,9 +13,12 @@ export class GradesComponent {
   gradesOriginal!: AresGrade[];
 
   @Input() selectedDomaine: string= '';
+
+  pageSize: number = 20;
+  pageIndex: number = 0;
   
   constructor(private aresService: AresService) {}
-  sortType: SortType = 'grade_academique';
+  sortType: SortType = 'code_etudes';
   sortReverse: boolean = false;
   gradesSubscription: Subscription | undefined;
 
@@ -33,7 +36,9 @@ export class GradesComponent {
     this.gradesSubscription = this.aresService.getAresGrades().subscribe({
       next: (res) => {
         console.log('NEXT', res);
-        this.grades = res.results;
+        // this.grades = res.results;
+        this.gradesOriginal = res.results;
+        this.grades = this.gradesOriginal.slice(0, this.pageSize);
       },
       error: (err) => {
         console.error('Erreur lors de la récupération des grades', err);
@@ -42,6 +47,23 @@ export class GradesComponent {
         console.log('COMPLETE');
       },
     });
+  }
+  nextPage(): void {
+    if (this.pageIndex < this.getLastPageIndex()) {
+      this.pageIndex++;
+      this.grades = this.gradesOriginal.slice(this.pageIndex * this.pageSize, (this.pageIndex + 1) * this.pageSize);
+    }  }
+
+  previousPage(): void {
+    if (this.pageIndex > 0) {
+      this.pageIndex--;
+      this.grades = this.gradesOriginal.slice(this.pageIndex * this.pageSize, (this.pageIndex + 1) * this.pageSize);
+    }
+  }
+
+  getLastPageIndex(): number {
+    return Math.ceil(this.gradesOriginal.length / this.pageSize) - 1;
+
   }
   sort(sortType: SortType) {
     if (this.sortType === sortType) {
@@ -59,10 +81,13 @@ export class GradesComponent {
   }
   filter(selectedDomaine: string) {
     if (this.selectedDomaine !== '') {
-        this.grades = this.grades.filter(grade => grade.domaine_paysage === this.selectedDomaine);
+      this.gradesOriginal = this.gradesOriginal.filter(grade => grade.domaine_paysage === this.selectedDomaine);
     } else {
-        // Remettre tous les résultats si aucun domaine paysage n'est sélectionné
-        this.grades = this.gradesOriginal;
+      this.getGrades();
     }
+
+    this.pageIndex = 0;
+    this.grades = this.gradesOriginal.slice(this.pageIndex * this.pageSize, (this.pageIndex + 1) * this.pageSize);
+
   }
 }
